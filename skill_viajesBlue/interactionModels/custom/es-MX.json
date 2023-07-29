@@ -1,0 +1,139 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "destino",
+              "elicitationRequired": true,
+              "type": "TipoDestino",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1310165483104.488752201887"
+              }
+            }
+          ],
+          "name": "ViajeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "necesito ayuda",
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "hasta luego",
+            "adios",
+            "adiós"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "OfertaCustomIntent",
+          "samples": [
+            "muestra las ofertas",
+            "quiero ver las ofertas"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "cantidad",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "lugar",
+              "type": "TipoDestino"
+            }
+          ],
+          "name": "BoletosIntent",
+          "samples": [
+            "quiero {cantidad} boletos para viajar a {lugar}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "destino",
+              "type": "TipoDestino",
+              "samples": [
+                "muestra viajes a {destino}",
+                "muestro vuelos a {destino}",
+                "vuelos a {destino}",
+                "viajes a {destino}"
+              ]
+            }
+          ],
+          "name": "ViajeIntent",
+          "samples": [
+            "muestra viajes a {destino}",
+            "muestra vuelos a {destino}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "puerto vallarta"
+              }
+            },
+            {
+              "name": {
+                "value": "chiapas"
+              }
+            },
+            {
+              "name": {
+                "value": "tampico"
+              }
+            },
+            {
+              "name": {
+                "value": "acapulco"
+              }
+            },
+            {
+              "name": {
+                "value": "cancún"
+              }
+            }
+          ],
+          "name": "TipoDestino"
+        }
+      ],
+      "invocationName": "viajes blue"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Lo siento, por el momento no contamos con viajes a ese destino"
+          }
+        ],
+        "id": "Elicit.Slot.1310165483104.488752201887"
+      }
+    ]
+  }
+}

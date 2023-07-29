@@ -1,0 +1,100 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "adiós"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "OfertaCustomIntent",
+          "samples": [
+            "muestra las ofertas",
+            "quiero ver las ofertas"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "cantidad",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "lugar",
+              "type": "TipoDestino"
+            }
+          ],
+          "name": "BoletosIntent",
+          "samples": [
+            "quiero {cantidad} boletos para viajar a {lugar}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "destino",
+              "type": "TipoDestino"
+            }
+          ],
+          "name": "ViajeIntent",
+          "samples": [
+            "mostrar vuelos a {destino}",
+            "quiero ver vuelos de {destino}",
+            "quiero viajar a {destino}",
+            "viajes a {destino}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "puerto vallarta"
+              }
+            },
+            {
+              "name": {
+                "value": "chiapas"
+              }
+            },
+            {
+              "name": {
+                "value": "tampico"
+              }
+            },
+            {
+              "name": {
+                "value": "acapulco"
+              }
+            },
+            {
+              "name": {
+                "value": "cancún"
+              }
+            }
+          ],
+          "name": "TipoDestino"
+        }
+      ],
+      "invocationName": "travels blue"
+    }
+  }
+}
